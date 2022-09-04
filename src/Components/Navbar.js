@@ -6,7 +6,8 @@ import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
 import { styled } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
-import logo from './logo.png'
+import logo from './logo.png';
+import { Hashlink as Link } from 'react-router-hash-link';
 
 
 
@@ -74,15 +75,15 @@ function Navbar () {
             <StyledAppBar>
             
                 <Toolbar>
-                    <img className={classes.logo}  src={logo} onClick={()=>{navigate('/home')}}/>
+                    <img className={classes.logo}  src={logo} onClick={() => window.location.replace("/#home")}/>
                     <div className={classes.buttons}>
-                        <div className={classes.topBarOptions} onClick={()=>{navigate('/home')}}>
+                        <div className={classes.topBarOptions} onClick={() => window.location.replace("/#home")}>
                             Home
                         </div>
-                        <div className={classes.topBarOptions} onClick={()=>{navigate('/projects')}}>
-                            Projects
+                        <div className={classes.topBarOptions}>
+                            <Link to="#projects">Projects</Link>
                         </div>
-                        <div className={classes.topBarOptions} onClick={()=>{navigate('/contact')}}>
+                        <div className={classes.topBarOptions} onClick={() => window.location.replace("/#contact")}>
                             Contact
                         </div>
 

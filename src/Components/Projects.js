@@ -34,6 +34,9 @@ import htmlPic from './html.png'
 import cssPic from './css.png'
 import flaskPic from './flask.png'
 import flockr from './flockr.png'
+import cPic from './c.png'
+import flightDb from './flightDb.png'
+//import { AnimatePresence } from "framer-motion";
 
 const useStyles = makeStyles(theme => ({
     outBox: {
@@ -54,7 +57,7 @@ const useStyles = makeStyles(theme => ({
         color:'white', 
         
         fontFamily: 'Alfa Slab One' ,
-        marginBottom:'30px',
+        marginBottom:'50px',
         marginTop:'30px',
         fontSize: '80px',
         
@@ -69,10 +72,11 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         flex: 1,
         verticalAlign: 'top',
-        marginBottom: '30px'
+        marginBottom: '50px'
     },
     projectTitle: {
-        color: '#424242',
+        //color: '#424242',
+        color: 'white',
         paddingBottom: '15px',
         paddingLeft: '35px',
         paddingRight: '35px',
@@ -82,7 +86,8 @@ const useStyles = makeStyles(theme => ({
         margin: '0'
     },
     description: {
-        color: '#424242',
+        //color: '#424242',
+        color: 'white',
         paddingBottom: '20px',
         paddingLeft: '35px',
         paddingRight: '35px',
@@ -124,7 +129,8 @@ const useStyles = makeStyles(theme => ({
         display: 'inline-block',
     },
     madeWith:{
-        color: '#424242',
+        //color: '#424242',
+        color: 'white',
         display: 'inline'
     },
     blue: {
@@ -137,8 +143,9 @@ const useStyles = makeStyles(theme => ({
   }));
 
 const StyledCard = styled(Card)({
-    backgroundColor: 'white',
+    //backgroundColor: 'white', 
     //backgroundImage: 'linear-gradient(to bottom right, #77C9D4, #57BC90)',
+    background: 'rgba(99, 102, 106, 0.90)',
     width: '90%',
     margin: 'auto',
     borderRadius: '10px',
@@ -178,8 +185,8 @@ function Projects() {
   
     return (<>
         
-        <div className={classes.outBox}>
-            <h1 className={classes.heading}><span className={classes.blueu}>My</span><span className={classes.green}>&nbsp;Projects</span></h1>
+        <div className={classes.outBox} id="projects">
+            <h1 className={classes.heading}><span>My</span><span className={classes.green}>&nbsp;Projects</span></h1>
             <div className={classes.hBox}>
                 <div className={classes.box}>
                     <StyledCard className={classes.hover}>
@@ -209,7 +216,7 @@ function Projects() {
                         
                         <h1 className={classes.projectTitle}>Loop Mania</h1>
                         <div className={classes.description}>
-                        A game in which the character travels through a loop, and gain points by defeating enemies and constructing buildings. The game features a series of different enemies, which increase in strength and complexity as the player progresses through the game.
+                        A game in which the character travels through a loop, and gains points by defeating enemies and constructing buildings. The game features a series of different enemies, which increase in strength and complexity as the player progresses through the game. The project uses object-oriented design patterns such as observer, state and strategy.
                         </div>
 
                         <StyledButton size='large' variant="contained" href="https://github.com/FionaWang12138/LoopMania"><GitHubIcon/>&nbsp;CODE</StyledButton >
@@ -241,7 +248,7 @@ function Projects() {
                        
                         <h1 className={classes.projectTitle}>Big Brain</h1>
                         <div className={classes.description}>
-                        Inspired by Kahoot, Big Brain is a website that allows users to create and take part in online multiple choice quizzes.<br/> 
+                        Big Brain is a website that allows users to create and take part in online multiple choice quizzes. A game creator can login/register, create new games by adding and editing questions, host games, and view past results in a dashboard. Game participants can join games through a link or password, answer questions, and view their own results.<br/> 
                        
 
                         </div>
@@ -283,9 +290,9 @@ function Projects() {
                         <br/>
                        
                         
-                        <h1 className={classes.projectTitle}>Lurk For Work</h1>
+                        <h1 className={classes.projectTitle}>Lurk For Work (frontend)</h1>
                         <div className={classes.description}>
-                        A rip-off version of LinkedIn, in which users can post job opportunities, view posts in a feed, follow other users, and interact with posts by commenting and liking. 
+                        A rip-off version of LinkedIn, in which users can post job opportunities, view posts in a feed, follow other users, and interact with posts by commenting and liking. The frontend interacts with a RESTful API in the backend, which was provided. 
                         </div>
 
                         <StyledButton size='large' variant="contained" href="https://github.com/FionaWang12138/LurkForWork"><GitHubIcon/>&nbsp;CODE</StyledButton >
@@ -295,7 +302,7 @@ function Projects() {
                     <StyledCard className={classes.hover}>
                         <CardMedia
                             component="img"
-                            alt="loopMania"
+                            alt="modified logistic regression"
                             height="300"
                             image={mlr}
                             top='0'
@@ -327,7 +334,7 @@ function Projects() {
                     <StyledCard className={classes.hover}>
                         <CardMedia
                             component="img"
-                            alt="loopMania"
+                            alt="flockr text art"
                             height="300"
                             image={flockr}
                             top='0'
@@ -346,9 +353,9 @@ function Projects() {
                       
                         </div>
                         <br/>
-                        <h1 className={classes.projectTitle}>Flockr Backend</h1>
+                        <h1 className={classes.projectTitle}>Flockr (backend)</h1>
                         <div className={classes.description}>
-                        A digital communication and collaboration tool for teams, allowing for both private and group messaging
+                        A digital communication and collaboration tool for teams, allowing users to register/login (authentication using JWT), send private messsages, create and manage group chats, and send group messages. This project was developed in a group, and managed using Git.
                         </div>
 
                         <StyledButton size='large' variant="contained" href="https://github.com/FionaWang12138/Flockr"><GitHubIcon/>&nbsp;CODE</StyledButton >
@@ -356,12 +363,34 @@ function Projects() {
 
                 </div>
                 <div className={classes.box}>
+                    <StyledCard className={classes.hover}>
+                        <CardMedia
+                            component="img"
+                            alt="flightDb AVLTree"
+                            height="300"
+                            image={flightDb}
+                            top='0'
+                        />
+                        <div className={classes.skillHolder}>
+                        <h3 className={classes.madeWith}>Made With:&nbsp;&nbsp;&nbsp;</h3>
+                        <StyledChip className="btn-skill"
+                            label="C"
+                            avatar={<img src={cPic} className={classes.skillIcon}/>}
+                        />
+                      
+                        </div>
+                        <br/>
+                        <h1 className={classes.projectTitle}>FlightDb</h1>
+                        <div className={classes.description}>
+                        FlightDb stores flight details, and offers efficient operations for searching for flights accodring to flight number, departure date, and departure airport. It can also find all flights between any two given times, as well as the next available flight out of any airport. The underlaying data structure of FlightDb is an AVL tree, which allows for insertion, deletion and search with time complexity O(log n)
+                        </div>
 
+                        <StyledButton size='large' variant="contained" href="https://github.com/FionaWang12138/FlightDB"><GitHubIcon/>&nbsp;CODE</StyledButton >
+                    </StyledCard>
                 </div>
             </div>
 
         </div>
-        <Animation/>
         
     </>)
 }

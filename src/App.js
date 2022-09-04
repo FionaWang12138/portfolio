@@ -4,6 +4,8 @@ import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
+import AboutMe from './Components/AboutMe';
+import Animation from './Components/Animation';
 
 import {
   BrowserRouter,
@@ -11,29 +13,28 @@ import {
   Route,
   // useNavigate,
   Navigate,
+  Switch, 
+  useLocation
   // Link,
 } from 'react-router-dom';
 
 
 function App () {
+
+  
   return (
     <>
+      
       <BrowserRouter>
         <Navbar/>
-
+        <Home/>
+        <Projects/>
+        <AboutMe/>
         
         
-        <Routes>
-          <Route path='/home' element={<Home />}></Route>
-          <Route path='/projects' element={<Projects />}></Route>
-          <Route path='/contact' element={<Contact />}></Route>
-          
-        </Routes>
         
-        
-       
       </BrowserRouter>
-
+      <Animation/>
     </>
 
   );

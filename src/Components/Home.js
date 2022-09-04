@@ -7,20 +7,21 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Animation from './Animation';
 import zIndex from '@mui/material/styles/zIndex';
+import {Card, CardActionArea} from "@mui/material";
+import { Icon } from '@iconify/react';
+import styles from './style.module.css';
 
 const useStyles = makeStyles(theme => ({
     outBox: {
-        height: '60vh',
-        width: '100vw',
+        height: '100vh',
         position: 'relative',
         display: 'flex',  
         justifyContent:'center', 
         alignItems:'center',
+        zIndex: 1,
     },
     textBox: {
-        width: '60vw',
         textAlign: 'centre',
-        zIndex: 1,
         justifyContent:'center', 
         alignItems:'center',
 
@@ -43,8 +44,30 @@ const useStyles = makeStyles(theme => ({
     },
     green: {
         color:'#57BC90',
+    },
+    icons: {
+        width: '300px',
+        display: 'flex',
+        height: '80px',
+        margin: 'auto',
+        marginTop: '50px',
+        columnGap: '30px',
+    },
+      
+    reduceMargin: {
+        margin: '0px',
+        color: 'white'
     }
   }));
+
+const StyledCard = styled(Card)({ 
+    flex: 1,
+    textAlign: "center", 
+    padding: '10px',
+    background: 'rgba(99, 102, 106, 0)',
+  
+})
+
 
 // dashboard for admin, diaplaying all quizzes, and some metadata about quizzes
 function Home () {
@@ -57,11 +80,25 @@ function Home () {
             <div className={classes.textBox}>
                 <h1 className={classes.heading}>Hi, I'm <span className={classes.blue} >Fiona</span>&nbsp;<span className={classes.green}>Wang</span></h1>
                 <br/>
-                <h3 className={classes.subLine}>A Third Year Computer Science student at UNSW</h3>
+                <h3 className={classes.subLine}>A Third Year Computer Science Student at UNSW</h3>
+                <div className={classes.icons}>
+                    <StyledCard ><CardActionArea href="https://github.com/FionaWang12138/">
+                        <div><Icon icon="akar-icons:github-fill" color="#77C9D4" width="30" height="30" /></div>
+                        <h4 className={classes.reduceMargin}>GitHub</h4>
+                    </CardActionArea></StyledCard>
+                    <StyledCard><CardActionArea href = "mailto: fionawang12138@gmail.com">
+                        <div><Icon icon="eva:email-outline" color="#67cab9" width="30" height="30" /></div>
+                        <h4 className={classes.reduceMargin}>Email</h4>
+                    </CardActionArea></StyledCard>
+                    <StyledCard><CardActionArea href = "mailto: fionawang12138@gmail.com">
+                        <div><Icon icon="healthicons:i-certificate-paper-outline" color="#57BC90" width="30" height="30" /></div>
+                        <h4 className={classes.reduceMargin}>Resume</h4>
+                    </CardActionArea></StyledCard>
+                </div>
             </div>
+            
         </div>
         
-        <Animation/>
         
 
 
