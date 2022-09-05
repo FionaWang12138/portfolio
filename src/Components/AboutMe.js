@@ -37,6 +37,9 @@ const useStyles = makeStyles(theme => ({
         fontSize:"80px", 
         fontFamily:"Times New Roman",
         marginBottom: '20px',
+        ['@media (max-width:850px)']: { 
+            fontSize:"64px"
+        }
      
     },
     greyBox: {
@@ -44,7 +47,10 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
         borderRadius: '10px',
         marginBottom: '50px',
-        padding: '20px'
+        padding: '20px',
+        ['@media (max-width:850px)']: { 
+            padding: '0px',
+        }
     },
     subHead: {
         opacity: '100%',
@@ -66,7 +72,11 @@ const useStyles = makeStyles(theme => ({
         fontSize: '22px',
         margin: 0,
         display: 'inline-block',
-        top: 0
+        top: 0,
+        ['@media (max-width:850px)']: { 
+            paddingLeft: '15px',
+            paddingRight: '10px',
+        }
     },
     blue: {
         color:'#77C9D4',
@@ -74,6 +84,10 @@ const useStyles = makeStyles(theme => ({
     skillIcon: {
         width: '35px !important',
         height: '35px !important',
+        ['@media (max-width:850px)']: { 
+            width: '20px !important',
+            height: '20px !important',
+        }
         
     },
 }));
@@ -92,6 +106,13 @@ const StyledChip = styled(Chip)({
     paddingRight: '10px',
     transition: "transform 0.15s ease-in-out",
     "&:hover": { transform: "scale3d(1.05, 1.05, 1)" },
+    ['@media (max-width:850px)']: { 
+        fontSize: '12px',
+        height: '30px',
+        paddingLeft: '0px',
+        paddingRight: '0px',
+        marginBottom: '5px',
+    }
 });
 
 function AboutMe () {

@@ -6,7 +6,6 @@ import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import AboutMe from './Components/AboutMe';
 import Animation from './Components/Animation';
-import circularLogo from './Components/circularLogo.png'
 
 import {
   BrowserRouter,

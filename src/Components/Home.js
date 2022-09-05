@@ -17,7 +17,10 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'centre',
         justifyContent:'center', 
         alignItems:'center',
-        padding: '20px'
+        padding: '20px',
+        ['@media (max-width:850px)']: { 
+            padding: '0px',
+        }
 
     },
     heading: {
@@ -25,12 +28,22 @@ const useStyles = makeStyles(theme => ({
         fontSize:"80px", 
         fontFamily:"Times New Roman",
         marginBottom: '10px',
+        paddingLeft: '20px',
+        paddingRight: '20px',
+        ['@media (max-width:850px)']: { 
+            fontSize:"64px"
+        }
      
     },
     subLine: {
         color: 'white',
         fontSize:"30px", 
         fontFamily:"Times New Roman",
+        paddingLeft: '20px',
+        paddingRight: '20px',
+        ['@media (max-width:850px)']: { 
+            margin: '0px',
+        }
         
     },
     blue: {
@@ -84,7 +97,7 @@ function Home () {
                         <div><Icon icon="eva:email-outline" color="#67cab9" width="30" height="30" /></div>
                         <h4 className={classes.reduceMargin}>Email</h4>
                     </CardActionArea></StyledCard>
-                    <StyledCard><CardActionArea>
+                    <StyledCard><CardActionArea href = "mailto: fionawang12138@gmail.com">
                         <div><Icon icon="healthicons:i-certificate-paper-outline" color="#57BC90" width="30" height="30" /></div>
                         <h4 className={classes.reduceMargin}>Resume</h4>
                     </CardActionArea></StyledCard>

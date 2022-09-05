@@ -28,6 +28,9 @@ const useStyles = makeStyles(theme => ({
         fontSize:"80px", 
         fontFamily:"Times New Roman",
         marginBottom: '20px',
+        ['@media (max-width:850px)']: { 
+            fontSize:"64px"
+        }
      
     },
     greyBox: {

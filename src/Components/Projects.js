@@ -39,14 +39,14 @@ const useStyles = makeStyles(theme => ({
         alignItems:'center',
     },
     heading: {
-      
         color:'white', 
-        
         fontFamily: 'Alfa Slab One' ,
         marginBottom:'50px',
         marginTop:'30px',
         fontSize: '80px',
-        
+        ['@media (max-width:850px)']: { 
+            fontSize:"64px"
+        }
      
     },
     hBox: {
@@ -96,12 +96,17 @@ const useStyles = makeStyles(theme => ({
     skillIcon: {
         width: '35px !important',
         height: '35px !important',
+        ['@media (max-width:850px)']: { 
+            width: '20px !important',
+            height: '20px !important',
+        }
         
     },
     madeWith:{
         //color: '#424242',
         color: 'white',
-        display: 'inline'
+        display: 'inline',
+        marginBottom: '10px'
     },
     green: {
         color:'#57BC90',
@@ -117,7 +122,11 @@ const StyledCard = styled(Card)({
     width: '90%',
     margin: 'auto',
     borderRadius: '10px',
-    marginTop: 0
+    marginTop: 0,
+    ['@media (max-width:850px)']: { 
+        width: '100%',
+    
+    }
 
 });
 const StyledChip = styled(Chip)({
@@ -132,6 +141,12 @@ const StyledChip = styled(Chip)({
     marginBottom: '15px',
     paddingLeft: '10px',
     paddingRight: '10px',
+    ['@media (max-width:850px)']: { 
+        fontSize: '12px',
+        height: '30px',
+        paddingLeft: '0px',
+        paddingRight: '0px',
+    }
 });
 
 const StyledButton = styled(Button)({
@@ -140,7 +155,7 @@ const StyledButton = styled(Button)({
     marginLeft: '35px',
     marginBottom: '20px',
 
-})
+});
 
 
 function Projects() {
@@ -160,6 +175,7 @@ function Projects() {
                             height="300"
                             image={LoopMania}
                             top='0'
+                           
                         />
                         <div className={classes.skillHolder}>
                         <h3 className={classes.madeWith}>Made With:&nbsp;&nbsp;&nbsp;</h3>

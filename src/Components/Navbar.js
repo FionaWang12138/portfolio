@@ -8,17 +8,14 @@ import logo from './logo.png';
 
 
 const useStyles = makeStyles(theme => ({
-    tb: {
-        boxShadow: "none",
-        //backgroundImage: 'linear-gradient(to right, #77D9C4, #57BC90)'
-        backgroundColor: '#1e1e1e',
-        height:'60vh',
-    },
     buttons: {
         width: '400px',
         right: '50px',
         position: 'absolute',
-        display: 'flex'
+        display: 'flex',
+        ['@media (max-width:850px)']: { 
+            width: '280px'
+        }
     },
     topBarOptions: {
         fontSize:"24px", 
@@ -30,6 +27,7 @@ const useStyles = makeStyles(theme => ({
         marginRight: '20px',
         width: '100%',
         textDecoration: 'none', 
+        
     },
     logo: {
         width: '50px',
@@ -67,7 +65,6 @@ function Navbar () {
                    
                     
                     <div className={classes.buttons}>
-                        <a className={classes.topBarOptions} href="#home" >Home</a>
                         <a className={classes.topBarOptions} href="#projects" >Projects</a>
                         <a className={classes.topBarOptions} href="#aboutMe" >About</a>
                         <a className={classes.topBarOptions} href="#contact" >Contact</a>
