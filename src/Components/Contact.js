@@ -65,7 +65,8 @@ const StyledButton = styled(Button)({
     color: 'white',
     width: '200px',
     height: '50px',
-    fontSize: '25px'
+    fontSize:"24px", 
+    fontWeight: '800',
 
 })
 
@@ -74,7 +75,7 @@ const StyledBox = styled(Box)({
     display: 'flex',
     height: '50px',
     marginBotton: '20px !important',
-    padding: '0'
+    padding: '0',
 })
 
 function Contact () {

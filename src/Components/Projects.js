@@ -110,7 +110,7 @@ const useStyles = makeStyles(theme => ({
     },
     green: {
         color:'#57BC90',
-    }
+    },
    
   }));
 
@@ -175,7 +175,7 @@ function Projects() {
                             height="300"
                             image={LoopMania}
                             top='0'
-                           
+                            
                         />
                         <div className={classes.skillHolder}>
                         <h3 className={classes.madeWith}>Made With:&nbsp;&nbsp;&nbsp;</h3>
