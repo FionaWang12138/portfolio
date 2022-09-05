@@ -7,8 +7,11 @@ import { makeStyles } from '@mui/styles';
 import { styled } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 import logo from './logo.png';
-import { Hashlink as Link } from 'react-router-hash-link';
+//import { Hashlink as Link } from 'react-router-hash-link';
+import { Anchor } from 'antd';
+import styles from './style.module.css';
 
+const { Link } = Anchor;
 
 
 const useStyles = makeStyles(theme => ({
@@ -19,8 +22,9 @@ const useStyles = makeStyles(theme => ({
         height:'60vh',
     },
     buttons: {
-        paddingLeft: '60% !important',
-        width: '100%',
+        width: '400px',
+        right: '50px',
+        position: 'absolute',
         display: 'flex'
     },
     topBarOptions: {
@@ -31,7 +35,8 @@ const useStyles = makeStyles(theme => ({
         color:'white',
         cursor: 'pointer',
         flex: 1,
-        width: '100%'
+        width: '100%',
+        textDecoration: 'none', 
     },
     logo: {
         width: '50px',
@@ -40,17 +45,6 @@ const useStyles = makeStyles(theme => ({
     }
   }));
 
-const StyledTypography = styled(Typography)({
-    //backgroundColor: theme.palette.background.default, //property to override
-    fontSize:"24px", 
-    fontWeight: '800',
-    fontFamily:"Times New Roman",
-    flexGrow: 1,
-    color:'white',
-    cursor: 'pointer',
-    flex: 1,
-    width: '100%'
-});
 
 const StyledAppBar = styled(AppBar)({
     boxShadow: "none",
@@ -61,7 +55,9 @@ const StyledAppBar = styled(AppBar)({
     //borderBottomLeftRadius: '15px'
 });
 
-
+const StyledToolbar = styled(Toolbar)({
+    width: '100%'
+})
 
 
 function Navbar () {
@@ -74,24 +70,21 @@ function Navbar () {
             
             <StyledAppBar>
             
-                <Toolbar>
+                <StyledToolbar>
                     <img className={classes.logo}  src={logo} onClick={() => window.location.replace("/#home")}/>
+                   
+                    
                     <div className={classes.buttons}>
-                        <div className={classes.topBarOptions} onClick={() => window.location.replace("/#home")}>
-                            Home
-                        </div>
-                        <div className={classes.topBarOptions}>
-                            <Link to="#projects">Projects</Link>
-                        </div>
-                        <div className={classes.topBarOptions} onClick={() => window.location.replace("/#contact")}>
-                            Contact
-                        </div>
-
+                        <a className={classes.topBarOptions} href="#home" >Home</a>
+                        <a className={classes.topBarOptions} href="#projects" >Projects</a>
+                        <a className={classes.topBarOptions} href="#aboutMe" >About Me</a>
                     </div>
                     
-                </Toolbar>
+                    
+                </StyledToolbar>
             </StyledAppBar>
         </Box>
+       
         </>
     );
 }

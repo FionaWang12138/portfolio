@@ -8,3 +8,21 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.linkStyle {
+  font-size: 48px;
+  font-weight: 800;
+  font-family: Times New Roman;
+  flex-grow: 1;
+  color: white;
+  cursor: pointer;
+  flex: 1;
+  width: 100%
+}
+
+Link [title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -100%;
+  left: 0;
+}

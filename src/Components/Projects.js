@@ -36,6 +36,8 @@ import flaskPic from './flask.png'
 import flockr from './flockr.png'
 import cPic from './c.png'
 import flightDb from './flightDb.png'
+import bootstrapPic from './bootstrap.png'
+import muiPic from './mui.png'
 //import { AnimatePresence } from "framer-motion";
 
 const useStyles = makeStyles(theme => ({
@@ -65,9 +67,12 @@ const useStyles = makeStyles(theme => ({
     },
     hBox: {
         width: '100%',
-        display: 'flex',
-        flex: 1,
+        ['@media (min-width:850px)']: { 
+            display: 'flex',
+            flex: 1,
+        }
     },
+    
     box: {
         display: 'flex',
         flex: 1,
@@ -145,7 +150,8 @@ const useStyles = makeStyles(theme => ({
 const StyledCard = styled(Card)({
     //backgroundColor: 'white', 
     //backgroundImage: 'linear-gradient(to bottom right, #77C9D4, #57BC90)',
-    background: 'rgba(99, 102, 106, 0.90)',
+    //background: 'rgba(99, 102, 106, 0.90)',
+    background: 'rgba(65, 65, 65, 0.90)',
     width: '90%',
     margin: 'auto',
     borderRadius: '10px',
@@ -160,6 +166,10 @@ const StyledChip = styled(Chip)({
     fontSize:"16px",
     height: '50px',
     marginRight: '10px',
+    borderRadius: '25px',
+    marginBottom: '15px',
+    paddingLeft: '10px',
+    paddingRight: '10px',
 });
 
 const StyledButton = styled(Button)({
@@ -183,9 +193,9 @@ function Projects() {
 
     const classes = useStyles()
   
-    return (<>
+    return (<div id="projects">
         
-        <div className={classes.outBox} id="projects">
+        <div className={classes.outBox}>
             <h1 className={classes.heading}><span>My</span><span className={classes.green}>&nbsp;Projects</span></h1>
             <div className={classes.hBox}>
                 <div className={classes.box}>
@@ -243,6 +253,10 @@ function Projects() {
                             label="React"
                             avatar={<img src={reactPic} className={classes.skillIcon}/>}
                         />  
+                        <StyledChip className="btn-skill"
+                            label="Material UI"
+                            avatar={<img src={muiPic} className={classes.skillIcon}/>}
+                        />
                         </div>
                         <br/>
                        
@@ -285,6 +299,10 @@ function Projects() {
                             label="JavaScript"
                             avatar={<img src={jsPic} className={classes.skillIcon}/>}
                         />
+                        <StyledChip className="btn-skill" 
+                            label="Bootstrap"
+                            avatar={<img src={bootstrapPic} className={classes.skillIcon}/>}
+                        /> 
                       
                         </div>
                         <br/>
@@ -392,7 +410,7 @@ function Projects() {
 
         </div>
         
-    </>)
+    </div >)
 }
 
 export default Projects;

@@ -24,6 +24,7 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'centre',
         justifyContent:'center', 
         alignItems:'center',
+        padding: '20px'
 
     },
     heading: {
@@ -73,7 +74,7 @@ const StyledCard = styled(Card)({
 function Home () {
     const classes = useStyles();
   // reuturns a nave bar, and all quizes
-    return (<>
+    return (<div id='home'>
         
         
         <div className={classes.outBox}>
@@ -102,7 +103,7 @@ function Home () {
         
 
 
-    </>)
+    </div>)
 }
 
 export default Home;

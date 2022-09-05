@@ -1,15 +1,28 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import {
+    Chip,
+} from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import { styled } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 import logo from './logo.png'
 import Animation from './Animation';
 import unswLogo from './unsw.png'
-
+import javaPic from './java.png'
+import javaFXPic from './javafx.png'
+import jsPic from './js.png'
+import reactPic from './react.png'
+import pythonPic from './python.png'
+import htmlPic from './html.png'
+import cssPic from './css.png'
+import flaskPic from './flask.png'
+import cPic from './c.png'
+import gitPic from './git.png'
+import sqlPic from './sql.png'
+import postgresqlPic from './postgresql.png'
+import rPic from './r.png'
+import bootstrapPic from './bootstrap.png'
+import muiPic from './mui.png'
 
 const useStyles = makeStyles(theme => ({
     outBox: {
@@ -40,9 +53,8 @@ const useStyles = makeStyles(theme => ({
     greyBox: {
         //backgroundColor: '#63666A',
         //backgroundColor: 'white',
-        background: 'rgba(99, 102, 106, 0.90)',
+        background: 'rgba(65, 65, 65, 0.90)',
         width: '100%',
-        height: '500px',
         borderRadius: '10px',
         marginBottom: '50px',
         padding: '20px'
@@ -59,39 +71,133 @@ const useStyles = makeStyles(theme => ({
         margin: '0'
     },
     content: {
-        color: '#424242',
+        color: 'white',
         paddingBottom: '20px',
-        paddingLeft: '35px',
+        paddingLeft: '55px',
         paddingRight: '35px',
         fontFamily: 'Times New Roman',
         fontSize: '22px',
-        margin: 0
+        margin: 0,
+        display: 'inline-block',
+        top: 0
     },
     blue: {
         color:'#77C9D4',
     },
+    skillIcon: {
+        width: '35px !important',
+        height: '35px !important',
+        
+    },
 }));
 
+const StyledChip = styled(Chip)({
+    color: 'white',
+    //backgroundColor: '#77C9D4',
+    backgroundImage: 'linear-gradient(to bottom right, #77C9D4, #57BC90)',
+    fontWeight:"700", 
+    fontSize:"16px",
+    height: '50px',
+    marginRight: '15px',
+    borderRadius: '25px',
+    marginBottom: '15px',
+    paddingLeft: '10px',
+    paddingRight: '10px',
+    transition: "transform 0.15s ease-in-out",
+    "&:hover": { transform: "scale3d(1.05, 1.05, 1)" },
+});
 
 function AboutMe () {
     
     const classes = useStyles();
     const navigate = useNavigate();
 
-    return (<>
+    return (<div id='aboutMe'>
         <div className={classes.outBox}>
             
             <h1 className={classes.heading}><span>About&nbsp;</span><span className={classes.blue} >Me</span></h1>
             <div className={classes.greyBox}>
                 <h1 className={classes.subHead}>Education:</h1>
-                <img src={unswLogo}/>
+                
                 <div className={classes.content}>
-                    &bull;
+                    2020 - 2022 <br/>
+                    University of New South Wales - Bachelor of Science (Computer Science) <br/> 
+                    &nbsp;&nbsp;&bull; WAM: 87.737 <br/> 
+                    &nbsp;&nbsp;&bull; Dean's Honor List (2020, 2021)
                 </div>
+                
                 <h1 className={classes.subHead}>My Skills:</h1>
-                <div className={classes.content}></div>
+                <div className={classes.content}>
+                    <StyledChip className="btn-skill"
+                        label="C"
+                        avatar={<img src={cPic} className={classes.skillIcon}/>}
+                    />
+                    <StyledChip className="btn-skill"
+                        label="Python"
+                        avatar={<img src={pythonPic} className={classes.skillIcon}/>}
+                    />
+                    <StyledChip className="btn-skill"
+                        label="Java"
+                        avatar={<img src={javaPic} className={classes.skillIcon} alt='Java logo'/>}
+                    />
+                    <StyledChip className="btn-skill" 
+                        label="JavaFX"
+                        avatar={<img src={javaPic} className={classes.skillIcon}/>}
+                    />
+                    <StyledChip className="btn-skill"
+                        label="HTML"
+                        avatar={<img src={htmlPic} className={classes.skillIcon}/>}
+                    />
+                    <StyledChip className="btn-skill"
+                        label="CSS"
+                        avatar={<img src={cssPic} className={classes.skillIcon}/>}
+                    />
+                    <StyledChip className="btn-skill"
+                        label="JavaScript"
+                        avatar={<img src={jsPic} className={classes.skillIcon}/>}
+                    />
+                    <StyledChip className="btn-skill" 
+                        label="React"
+                        avatar={<img src={reactPic} className={classes.skillIcon}/>}
+                    />  
+                    <StyledChip className="btn-skill"
+                        label="Material UI"
+                        avatar={<img src={muiPic} className={classes.skillIcon}/>}
+                    />
+                    <StyledChip className="btn-skill" 
+                        label="Bootstrap"
+                        avatar={<img src={bootstrapPic} className={classes.skillIcon}/>}
+                    />  
+                    <StyledChip className="btn-skill"
+                        label="SQL"
+                        avatar={<img src={sqlPic} className={classes.skillIcon}/>}
+                    />
+                    <StyledChip className="btn-skill"
+                        label="PostgreSQL"
+                        avatar={<img src={postgresqlPic} className={classes.skillIcon}/>}
+                    />
+                    <StyledChip className="btn-skill"
+                        label="R"
+                        avatar={<img src={rPic} className={classes.skillIcon}/>}
+                    />
+                    <StyledChip className="btn-skill"
+                        label="Flask"
+                        avatar={<img src={flaskPic} className={classes.skillIcon}/>}
+                    />
+                    <StyledChip className="btn-skill"
+                        label="Git"
+                        avatar={<img src={gitPic} className={classes.skillIcon}/>}
+                    />
+                    
+                    
+                </div>
                 <h1 className={classes.subHead}>Hobbies & Community:</h1>
-                <div className={classes.content}></div>
+                <div className={classes.content}>
+                    &nbsp;&nbsp;&bull; Crocheting and Knitting <br/>
+                    &nbsp;&nbsp;&bull; Speedcubing <br/>
+                    &nbsp;&nbsp;&bull; Executive of UNSW RubikSoc (Vice President 2021, Events Director 2022) <br/>
+                    &nbsp;&nbsp;&bull; Member of World Cube Association Archive Team (2021 - Current)<br/>
+                </div>
 
             </div>
 
@@ -99,7 +205,7 @@ function AboutMe () {
         </div>
         
        
-        </>
+        </div>
     );
 }
 
