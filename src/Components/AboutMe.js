@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
         
         display: 'flex',
         flexDirection: 'column',
-        paddingTop: '65px',
+        paddingTop: '30px',
         justifyContent:'center', 
         alignItems:'center',
     },

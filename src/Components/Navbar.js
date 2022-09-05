@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
         flexGrow: 1,
         color:'white',
         cursor: 'pointer',
-        flex: 1,
+        marginRight: '20px',
         width: '100%',
         textDecoration: 'none', 
     },
@@ -77,7 +77,8 @@ function Navbar () {
                     <div className={classes.buttons}>
                         <a className={classes.topBarOptions} href="#home" >Home</a>
                         <a className={classes.topBarOptions} href="#projects" >Projects</a>
-                        <a className={classes.topBarOptions} href="#aboutMe" >About Me</a>
+                        <a className={classes.topBarOptions} href="#aboutMe" >About</a>
+                        <a className={classes.topBarOptions} href="#contact" >Contact</a>
                     </div>
                     
                     
