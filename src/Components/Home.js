@@ -1,15 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
 import { makeStyles } from '@mui/styles';
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import Animation from './Animation';
-import zIndex from '@mui/material/styles/zIndex';
 import {Card, CardActionArea} from "@mui/material";
 import { Icon } from '@iconify/react';
-import styles from './style.module.css';
 
 const useStyles = makeStyles(theme => ({
     outBox: {
@@ -91,7 +84,7 @@ function Home () {
                         <div><Icon icon="eva:email-outline" color="#67cab9" width="30" height="30" /></div>
                         <h4 className={classes.reduceMargin}>Email</h4>
                     </CardActionArea></StyledCard>
-                    <StyledCard><CardActionArea href = "mailto: fionawang12138@gmail.com">
+                    <StyledCard><CardActionArea>
                         <div><Icon icon="healthicons:i-certificate-paper-outline" color="#57BC90" width="30" height="30" /></div>
                         <h4 className={classes.reduceMargin}>Resume</h4>
                     </CardActionArea></StyledCard>

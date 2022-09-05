@@ -1,8 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import { styled } from '@mui/system';
-import { makeStyles } from '@mui/styles';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 

@@ -1,31 +1,17 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
 import { makeStyles } from '@mui/styles';
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import Animation from './Animation';
-import { posts } from "./dummy-posts";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import {
     Card,
-    CardActionArea,
-    CardActions,
-    CardContent,
     CardMedia,
-    Typography,
-    Grid,
     Chip,
-    Avatar,
     Button
   } from "@mui/material";
 import LoopMania from "./LoopMania.png";
 import javaPic from './java.png'
-import javaFXPic from './javafx.png'
 import jsPic from './js.png'
 import reactPic from './react.png'
-import { ImportantDevices } from '@mui/icons-material';
 import bigBrain from './bigBrain.png'
 import mlr from './mlr.jpg'
 import pythonPic from './python.png'
@@ -42,12 +28,10 @@ import muiPic from './mui.png'
 
 const useStyles = makeStyles(theme => ({
     outBox: {
-       
         width: '85vw',
         marginLeft: '7.5vw',
         position: 'relative',
         zIndex: 1,
-        
         display: 'flex',
         flexDirection: 'column',
         paddingTop: '65px',
@@ -80,7 +64,6 @@ const useStyles = makeStyles(theme => ({
         marginBottom: '50px'
     },
     projectTitle: {
-        //color: '#424242',
         color: 'white',
         paddingBottom: '15px',
         paddingLeft: '35px',
@@ -106,40 +89,19 @@ const useStyles = makeStyles(theme => ({
         paddingTop: '20px',
         display: 'block'
     },
-    sizeAvatar: {
-        height: 50,
-        width: 50,
-    },
     hover: {
         transition: "transform 0.15s ease-in-out",
         "&:hover": { transform: "scale3d(1.05, 1.05, 1)" },
-    },
-    skillBox: {
-        color: 'white',
-        backgroundColor: '#858585',
-        fontWeight:"700", 
-        width: 'fit-content',
-        height: '50px',
-        borderRadius: '8px',
-        padding: '10px',
-        float: 'left',
     },
     skillIcon: {
         width: '35px !important',
         height: '35px !important',
         
     },
-    skillName: {
-        float:'right', 
-        display: 'inline-block',
-    },
     madeWith:{
         //color: '#424242',
         color: 'white',
         display: 'inline'
-    },
-    blue: {
-        color:'#77C9D4',
     },
     green: {
         color:'#57BC90',
@@ -180,14 +142,6 @@ const StyledButton = styled(Button)({
 
 })
 
-const StyledTypography = styled(Typography)({
-    color:'white', 
-    fontFamily: 'Alfa Slab One' ,
-    marginBottom:'30px',
-    marginTop:'50px'
-})
-
-
 
 function Projects() {
 
@@ -216,7 +170,7 @@ function Projects() {
                           
                         <StyledChip className="btn-skill" 
                             label="JavaFX"
-                            avatar={<img src={javaPic} className={classes.skillIcon}/>}
+                            avatar={<img src={javaPic} className={classes.skillIcon} alt="Java logo"/>}
                         />
                       
                         
@@ -246,16 +200,16 @@ function Projects() {
                         <h3 className={classes.madeWith}>Made With:&nbsp;&nbsp;&nbsp;</h3>
                         <StyledChip className="btn-skill"
                             label="JavaScript"
-                            avatar={<img src={jsPic} className={classes.skillIcon}/>}
+                            avatar={<img src={jsPic} className={classes.skillIcon} alt="Javascript logo"/>}
                         />
                           
                         <StyledChip className="btn-skill" 
                             label="React"
-                            avatar={<img src={reactPic} className={classes.skillIcon}/>}
+                            avatar={<img src={reactPic} className={classes.skillIcon} alt="React logo"/>}
                         />  
                         <StyledChip className="btn-skill"
                             label="Material UI"
-                            avatar={<img src={muiPic} className={classes.skillIcon}/>}
+                            avatar={<img src={muiPic} className={classes.skillIcon} alt="MUI logo"/>}
                         />
                         </div>
                         <br/>
@@ -289,19 +243,19 @@ function Projects() {
                         <h3 className={classes.madeWith}>Made With:&nbsp;&nbsp;&nbsp;</h3>
                         <StyledChip className="btn-skill"
                             label="HTML"
-                            avatar={<img src={htmlPic} className={classes.skillIcon}/>}
+                            avatar={<img src={htmlPic} className={classes.skillIcon} alt="html Logo"/>}
                         />
                         <StyledChip className="btn-skill"
                             label="CSS"
-                            avatar={<img src={cssPic} className={classes.skillIcon}/>}
+                            avatar={<img src={cssPic} className={classes.skillIcon} alt="CSS logo"/>}
                         />
                         <StyledChip className="btn-skill"
                             label="JavaScript"
-                            avatar={<img src={jsPic} className={classes.skillIcon}/>}
+                            avatar={<img src={jsPic} className={classes.skillIcon} alt="JavaScript logo"/>}
                         />
                         <StyledChip className="btn-skill" 
                             label="Bootstrap"
-                            avatar={<img src={bootstrapPic} className={classes.skillIcon}/>}
+                            avatar={<img src={bootstrapPic} className={classes.skillIcon} alt="Bootstrap logo"/>}
                         /> 
                       
                         </div>
@@ -329,7 +283,7 @@ function Projects() {
                         <h3 className={classes.madeWith}>Made With:&nbsp;&nbsp;&nbsp;</h3>
                         <StyledChip className="btn-skill"
                             label="Python"
-                            avatar={<img src={pythonPic} className={classes.skillIcon}/>}
+                            avatar={<img src={pythonPic} className={classes.skillIcon} alt="Python Logo"/>}
                         />
                       
                         </div>
@@ -361,12 +315,12 @@ function Projects() {
                         <h3 className={classes.madeWith}>Made With:&nbsp;&nbsp;&nbsp;</h3>
                         <StyledChip className="btn-skill"
                             label="Python"
-                            avatar={<img src={pythonPic} className={classes.skillIcon}/>}
+                            avatar={<img src={pythonPic} className={classes.skillIcon} alt="Python Icon"/>}
                         />
 
                         <StyledChip className="btn-skill"
                             label="Flask"
-                            avatar={<img src={flaskPic} className={classes.skillIcon}/>}
+                            avatar={<img src={flaskPic} className={classes.skillIcon} alt="Flask Icon"/>}
                         />
                       
                         </div>
@@ -393,7 +347,7 @@ function Projects() {
                         <h3 className={classes.madeWith}>Made With:&nbsp;&nbsp;&nbsp;</h3>
                         <StyledChip className="btn-skill"
                             label="C"
-                            avatar={<img src={cPic} className={classes.skillIcon}/>}
+                            avatar={<img src={cPic} className={classes.skillIcon} alt="C Icon"/>}
                         />
                       
                         </div>

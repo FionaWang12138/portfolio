@@ -1,11 +1,7 @@
 import * as React from 'react';
-import {
-    Chip,
-} from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import { styled } from '@mui/system';
-import { useNavigate } from 'react-router-dom';
-import { Box, Typography, Button, TextareaAutosize} from "@mui/material";
+import { Box, Button, TextareaAutosize} from "@mui/material";
 
 
 const useStyles = makeStyles(theme => ({
@@ -43,44 +39,17 @@ const useStyles = makeStyles(theme => ({
         marginBottom: '50px',
         padding: '20px'
     },
-    subHead: {
-        opacity: '100%',
-        color: 'white',
-        paddingBottom: '15px',
-        paddingLeft: '35px',
-        paddingRight: '35px',
-        paddingTop: '0px',
-        fontFamily: 'Times New Roman',
-        fontWeight: 700,
-        margin: '0'
-    },
-    content: {
-        color: 'white',
-        paddingBottom: '20px',
-        paddingLeft: '55px',
-        paddingRight: '35px',
-        fontFamily: 'Times New Roman',
-        fontSize: '22px',
-        margin: 0,
-        display: 'inline-block',
-        top: 0
-    },
-    blue: {
-        color:'#77C9D4',
-    },
     green: {
         color:'#57BC90',
-    },
-    skillIcon: {
-        width: '35px !important',
-        height: '35px !important',
-        
     },
     textForm: {
         width: '50px',
         display: 'flex',
-        flex: 1
-    }
+        flex: 1,
+        paddingLeft: '10px !important',
+        paddingRight: '10px !important',
+    },
+
 }));
 
 const StyledButton = styled(Button)({
@@ -89,46 +58,49 @@ const StyledButton = styled(Button)({
     fontFamily: 'Times New Roman',
     marginLeft: 'calc(50% - 100px)',
     marginBottom: '20px',
+    marginTop: '25px',
     color: 'white',
     width: '200px',
-    height: '50px'
+    height: '50px',
+    fontSize: '25px'
 
 })
 
 const StyledBox = styled(Box)({
     width: '100%',
     display: 'flex',
-    height: '50px'
+    height: '50px',
+    marginBotton: '20px !important',
+    padding: '0'
 })
 
 function Contact () {
     
     const classes = useStyles();
-    const navigate = useNavigate();
 
     return (<div id='contact'>
         <div className={classes.outBox}>
             
             <h1 className={classes.heading}><span>Contact&nbsp;</span><span className={classes.green} >Me</span></h1>
             <div className={classes.greyBox}>
-                <Box component="form" className="contact">
-                    <form action="https://getform.io/f/ac804f85-dfa6-4b41-84ee-f2cef901e317" method="POST">
-                        <StyledBox>
-                            <input className={classes.textForm} name="Name" placeholder="Name"></input>
-                            <input className={classes.textForm} name="Email" placeholder="Email" type="email"></input>
-                        </StyledBox>
-                        <TextareaAutosize
-                            aria-label="empty textarea"
-                            placeholder="Your Message"
-                            className="text-area"
-                            style={{ width:  "100%", height: "200px" }}
-                            name="Message"
-                        ></TextareaAutosize>
-                        
-                        <StyledButton type="submit" size="small" >Submit</StyledButton>
-                        
-                    </form>
-                </Box>
+                
+                <form action="https://getform.io/f/ac804f85-dfa6-4b41-84ee-f2cef901e317" method="POST">
+                    <StyledBox>
+                        <input style={{width: '50%', marginRight: '10px'}} name="Name" placeholder="Name" ></input>
+                        <input style={{width: '50%', marginLeft: '10px'}} name="Email" placeholder="Your Email" type="email"></input>
+                    </StyledBox>
+                    <TextareaAutosize
+                        aria-label="empty textarea"
+                        placeholder="Your Message"
+                        className="text-area"
+                        style={{ width:  "calc(100% - 6px)", height: "200px", marginTop: "20px" }}
+                        name="Message"
+                    ></TextareaAutosize>
+                    
+                    <StyledButton type="submit" size="small" >Submit</StyledButton>
+                    
+                </form>
+                
 				
 
             </div>

@@ -2,16 +2,9 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
 import { styled } from '@mui/system';
-import { useNavigate } from 'react-router-dom';
 import logo from './logo.png';
-//import { Hashlink as Link } from 'react-router-hash-link';
-import { Anchor } from 'antd';
-import styles from './style.module.css';
-
-const { Link } = Anchor;
 
 
 const useStyles = makeStyles(theme => ({
@@ -63,7 +56,6 @@ const StyledToolbar = styled(Toolbar)({
 function Navbar () {
     
     const classes = useStyles();
-    const navigate = useNavigate();
 
     return (<>
         <Box>
@@ -71,7 +63,7 @@ function Navbar () {
             <StyledAppBar>
             
                 <StyledToolbar>
-                    <img className={classes.logo}  src={logo} onClick={() => window.location.replace("/#home")}/>
+                    <img className={classes.logo}  src={logo} onClick={() => window.location.replace("/#home")} alt='Website logo'/>
                    
                     
                     <div className={classes.buttons}>

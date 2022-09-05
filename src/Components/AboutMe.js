@@ -4,12 +4,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import { styled } from '@mui/system';
-import { useNavigate } from 'react-router-dom';
-import logo from './logo.png'
-import Animation from './Animation';
-import unswLogo from './unsw.png'
 import javaPic from './java.png'
-import javaFXPic from './javafx.png'
 import jsPic from './js.png'
 import reactPic from './react.png'
 import pythonPic from './python.png'
@@ -26,12 +21,6 @@ import muiPic from './mui.png'
 
 const useStyles = makeStyles(theme => ({
     outBox: {
-        //height: '100vh',
-        //position: 'relative',
-        //display: 'flex',  
-        //justifyContent:'center', 
-        //zIndex: 1,
-
         width: '85vw',
         marginLeft: '7.5vw',
         position: 'relative',
@@ -51,8 +40,6 @@ const useStyles = makeStyles(theme => ({
      
     },
     greyBox: {
-        //backgroundColor: '#63666A',
-        //backgroundColor: 'white',
         background: 'rgba(65, 65, 65, 0.90)',
         width: '100%',
         borderRadius: '10px',
@@ -110,7 +97,6 @@ const StyledChip = styled(Chip)({
 function AboutMe () {
     
     const classes = useStyles();
-    const navigate = useNavigate();
 
     return (<div id='aboutMe'>
         <div className={classes.outBox}>
@@ -130,11 +116,12 @@ function AboutMe () {
                 <div className={classes.content}>
                     <StyledChip className="btn-skill"
                         label="C"
-                        avatar={<img src={cPic} className={classes.skillIcon}/>}
+                        avatar={<img src={cPic} className={classes.skillIcon} alt='C logo'/>}
+                        alt='C logo'
                     />
                     <StyledChip className="btn-skill"
                         label="Python"
-                        avatar={<img src={pythonPic} className={classes.skillIcon}/>}
+                        avatar={<img src={pythonPic} className={classes.skillIcon} alt='Python logo'/>}
                     />
                     <StyledChip className="btn-skill"
                         label="Java"
@@ -142,51 +129,51 @@ function AboutMe () {
                     />
                     <StyledChip className="btn-skill" 
                         label="JavaFX"
-                        avatar={<img src={javaPic} className={classes.skillIcon}/>}
+                        avatar={<img src={javaPic} className={classes.skillIcon} alt='Java logo'/>}
                     />
                     <StyledChip className="btn-skill"
                         label="HTML"
-                        avatar={<img src={htmlPic} className={classes.skillIcon}/>}
+                        avatar={<img src={htmlPic} className={classes.skillIcon} alt='HTML logo'/>}
                     />
                     <StyledChip className="btn-skill"
                         label="CSS"
-                        avatar={<img src={cssPic} className={classes.skillIcon}/>}
+                        avatar={<img src={cssPic} className={classes.skillIcon} alt='CSS logo'/>}
                     />
                     <StyledChip className="btn-skill"
                         label="JavaScript"
-                        avatar={<img src={jsPic} className={classes.skillIcon}/>}
+                        avatar={<img src={jsPic} className={classes.skillIcon} alt='Javascript logo'/>}
                     />
                     <StyledChip className="btn-skill" 
                         label="React"
-                        avatar={<img src={reactPic} className={classes.skillIcon}/>}
+                        avatar={<img src={reactPic} className={classes.skillIcon} alt='React logo'/>}
                     />  
                     <StyledChip className="btn-skill"
                         label="Material UI"
-                        avatar={<img src={muiPic} className={classes.skillIcon}/>}
+                        avatar={<img src={muiPic} className={classes.skillIcon} alt='MUI logo'/>}
                     />
                     <StyledChip className="btn-skill" 
                         label="Bootstrap"
-                        avatar={<img src={bootstrapPic} className={classes.skillIcon}/>}
+                        avatar={<img src={bootstrapPic} className={classes.skillIcon} alt='Bootstrap logo'/>}
                     />  
                     <StyledChip className="btn-skill"
                         label="SQL"
-                        avatar={<img src={sqlPic} className={classes.skillIcon}/>}
+                        avatar={<img src={sqlPic} className={classes.skillIcon} alt='Sql logo'/>}
                     />
                     <StyledChip className="btn-skill"
                         label="PostgreSQL"
-                        avatar={<img src={postgresqlPic} className={classes.skillIcon}/>}
+                        avatar={<img src={postgresqlPic} className={classes.skillIcon} alt='PostgreSQL logo'/>}
                     />
                     <StyledChip className="btn-skill"
                         label="R"
-                        avatar={<img src={rPic} className={classes.skillIcon}/>}
+                        avatar={<img src={rPic} className={classes.skillIcon} alt='R logo'/>}
                     />
                     <StyledChip className="btn-skill"
                         label="Flask"
-                        avatar={<img src={flaskPic} className={classes.skillIcon}/>}
+                        avatar={<img src={flaskPic} className={classes.skillIcon} alt='Flask logo'/>}
                     />
                     <StyledChip className="btn-skill"
                         label="Git"
-                        avatar={<img src={gitPic} className={classes.skillIcon}/>}
+                        avatar={<img src={gitPic} className={classes.skillIcon} alt='Git logo'/>}
                     />
                     
                     

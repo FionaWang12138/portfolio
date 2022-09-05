@@ -6,16 +6,10 @@ import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import AboutMe from './Components/AboutMe';
 import Animation from './Components/Animation';
+import circularLogo from './Components/circularLogo.png'
 
 import {
   BrowserRouter,
-  Routes,
-  Route,
-  // useNavigate,
-  Navigate,
-  Switch, 
-  useLocation
-  // Link,
 } from 'react-router-dom';
 
 
