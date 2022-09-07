@@ -89,15 +89,15 @@ function Home () {
                 <br/>
                 <h3 className={classes.subLine}>A Third Year Computer Science Student at UNSW</h3>
                 <div className={classes.icons}>
-                    <StyledCard ><CardActionArea href="https://github.com/FionaWang12138/">
+                    <StyledCard ><CardActionArea href="https://github.com/FionaWang12138/" target="_blank">
                         <div><Icon icon="akar-icons:github-fill" color="#77C9D4" width="30" height="30" /></div>
                         <h4 className={classes.reduceMargin}>GitHub</h4>
                     </CardActionArea></StyledCard>
-                    <StyledCard><CardActionArea href = "mailto: fionawang12138@gmail.com">
+                    <StyledCard><CardActionArea href = "mailto: fionawang12138@gmail.com" target="_blank">
                         <div><Icon icon="eva:email-outline" color="#67cab9" width="30" height="30" /></div>
                         <h4 className={classes.reduceMargin}>Email</h4>
                     </CardActionArea></StyledCard>
-                    <StyledCard><CardActionArea href = "mailto: fionawang12138@gmail.com">
+                    <StyledCard><CardActionArea href="https://drive.google.com/file/d/1NN0tS-F15Q6uUjicoTR3eA2jl7efbVnY/view?usp=sharing" target="_blank">
                         <div><Icon icon="healthicons:i-certificate-paper-outline" color="#57BC90" width="30" height="30" /></div>
                         <h4 className={classes.reduceMargin}>Resume</h4>
                     </CardActionArea></StyledCard>

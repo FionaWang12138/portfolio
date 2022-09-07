@@ -196,7 +196,7 @@ function Projects() {
                         
                         <h1 className={classes.projectTitle}>Loop Mania</h1>
                         <div className={classes.description}>
-                        A game in which the character travels through a loop, and gains points by defeating enemies and constructing buildings. The game features a series of different enemies, which increase in strength and complexity as the player progresses through the game. The project uses object-oriented design patterns such as observer, state and strategy.
+                        A game in which the character travels through a loop, and gains points by defeating enemies and constructing buildings. The game features a series of different enemies, which increase in strength and complexity as the player progresses through the game. The project uses object-oriented design patterns such as observer, state, and strategy.
                         </div>
 
                         <StyledButton size='large' variant="contained" href="https://github.com/FionaWang12138/LoopMania"><GitHubIcon/>&nbsp;CODE</StyledButton >
@@ -232,9 +232,7 @@ function Projects() {
                        
                         <h1 className={classes.projectTitle}>Big Brain</h1>
                         <div className={classes.description}>
-                        Big Brain is a website that allows users to create and take part in online multiple choice quizzes. A game creator can login/register, create new games by adding and editing questions, host games, and view past results in a dashboard. Game participants can join games through a link or password, answer questions, and view their own results.<br/> 
-                       
-
+                        Big Brain is a website that allows users to create and partake in online multiple-choice quizzes. A game creator can log in/register, create new games by adding and editing questions, host games, and view past results in a dashboard. Game participants can join games through a link or password, answer questions, and view their results.
                         </div>
                         <StyledButton size='large' variant="contained" href="https://github.com/FionaWang12138/BigBrain.git"><GitHubIcon/>&nbsp;CODE</StyledButton >
                     
@@ -280,7 +278,7 @@ function Projects() {
                         
                         <h1 className={classes.projectTitle}>Lurk For Work (frontend)</h1>
                         <div className={classes.description}>
-                        A rip-off version of LinkedIn, in which users can post job opportunities, view posts in a feed, follow other users, and interact with posts by commenting and liking. The frontend interacts with a RESTful API in the backend, which was provided. 
+                        A rip-off version of LinkedIn, in which users can post job opportunities, view posts in a feed, follow other users and interact with posts by commenting and liking. The front end interacts with a RESTful API in the backend, which was provided.
                         </div>
 
                         <StyledButton size='large' variant="contained" href="https://github.com/FionaWang12138/LurkForWork"><GitHubIcon/>&nbsp;CODE</StyledButton >
@@ -308,7 +306,7 @@ function Projects() {
                         
                         <h1 className={classes.projectTitle}>Predicting EBB Eligibility</h1>
                         <div className={classes.description}>
-                        Created for the TracHack challenge, which requires participants to make predictions on the eligibility of customers for the Emergency Broadband Benifits (EBB) program. Positive unlabelled data were given, which presented a one-class classification problem. Modified Logistic Regression was chosen as the final model, and an F1 score of 0.96 was achieved. 
+                        Created for the TracHack challenge, which requires participants to make predictions on the eligibility of customers for the Emergency Broadband Benefits (EBB) program. Positive unlabelled data were given, which presented a one-class classification problem. Modified Logistic Regression was chosen as the final model, and an F1 score of 0.96 was achieved.
                         </div>
 
                         <StyledButton size='large' variant="contained" href="https://github.com/FionaWang12138/PredictingEBBEligibility-OneClassClassification"><GitHubIcon/>&nbsp;CODE</StyledButton >
@@ -343,7 +341,7 @@ function Projects() {
                         <br/>
                         <h1 className={classes.projectTitle}>Flockr (backend)</h1>
                         <div className={classes.description}>
-                        A digital communication and collaboration tool for teams, allowing users to register/login (authentication using JWT), send private messsages, create and manage group chats, and send group messages. This project was developed in a group, and managed using Git.
+                        A digital communication and collaboration tool for teams, allowing users to register/log in (authentication using JWT), send private messages, create and manage group chats, and send group messages. This project was developed in a group and managed using Git.
                         </div>
 
                         <StyledButton size='large' variant="contained" href="https://github.com/FionaWang12138/Flockr"><GitHubIcon/>&nbsp;CODE</StyledButton >
@@ -370,7 +368,7 @@ function Projects() {
                         <br/>
                         <h1 className={classes.projectTitle}>FlightDb</h1>
                         <div className={classes.description}>
-                        FlightDb stores flight details, and offers efficient operations for searching for flights accodring to flight number, departure date, and departure airport. It can also find all flights between any two given times, as well as the next available flight out of any airport. The underlaying data structure of FlightDb is an AVL tree, which allows for insertion, deletion and search with time complexity O(log n)
+                        FlightDb stores flight details and offers efficient operations for searching for flights according to the flight number, departure date, and departure airport. It can also find all flights between any two given times, as well as the next available flight out of any airport. The underlying data structure of FlightDb is an AVL tree, which allows for insertion, deletion, and search with time complexity O(log n)
                         </div>
 
                         <StyledButton size='large' variant="contained" href="https://github.com/FionaWang12138/FlightDB"><GitHubIcon/>&nbsp;CODE</StyledButton >
