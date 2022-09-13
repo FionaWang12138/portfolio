@@ -97,7 +97,7 @@ function Home () {
                         <div><Icon icon="eva:email-outline" color="#67cab9" width="30" height="30" /></div>
                         <h4 className={classes.reduceMargin}>Email</h4>
                     </CardActionArea></StyledCard>
-                    <StyledCard><CardActionArea href="https://drive.google.com/file/d/1NN0tS-F15Q6uUjicoTR3eA2jl7efbVnY/view?usp=sharing" target="_blank">
+                    <StyledCard><CardActionArea href="https://drive.google.com/file/d/1pihx2hVt_xRYca0T7v9NVK5ldERNE3pX/view?usp=sharing" target="_blank">
                         <div><Icon icon="healthicons:i-certificate-paper-outline" color="#57BC90" width="30" height="30" /></div>
                         <h4 className={classes.reduceMargin}>Resume</h4>
                     </CardActionArea></StyledCard>
