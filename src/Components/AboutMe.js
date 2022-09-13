@@ -18,6 +18,7 @@ import postgresqlPic from './postgresql.png'
 import rPic from './r.png'
 import bootstrapPic from './bootstrap.png'
 import muiPic from './mui.png'
+import me from './me.jpg'
 
 const useStyles = makeStyles(theme => ({
     outBox: {
@@ -90,6 +91,11 @@ const useStyles = makeStyles(theme => ({
         }
         
     },
+    profilePic: {
+        width: '200px',
+        margin: 'auto',
+        borderRadius: '10px'
+    }
 }));
 
 const StyledChip = styled(Chip)({
@@ -124,10 +130,11 @@ function AboutMe () {
             
             <h1 className={classes.heading}><span>About&nbsp;</span><span className={classes.blue} >Me</span></h1>
             <div className={classes.greyBox}>
+                
                 <h1 className={classes.subHead}>Education:</h1>
                 
                 <div className={classes.content}>
-                    2020 - 2022 <br/>
+                    2020 - 2022/2023 <br/>
                     University of New South Wales - Bachelor of Science (Computer Science) <br/> 
                     &nbsp;&nbsp;&bull; WAM: 87.737 <br/> 
                     &nbsp;&nbsp;&bull; Dean's Honor List (2020, 2021)
