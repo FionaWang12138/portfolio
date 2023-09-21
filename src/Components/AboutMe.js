@@ -134,7 +134,7 @@ function AboutMe () {
                 <h1 className={classes.subHead}>Education:</h1>
                 
                 <div className={classes.content}>
-                    2020 - 2022/2023 <br/>
+                    2020 - 2022 <br/>
                     University of New South Wales - Bachelor of Science (Computer Science) <br/> 
                     &nbsp;&nbsp;&bull; WAM: 87.737 <br/> 
                     &nbsp;&nbsp;&bull; Dean's Honor List (2020, 2021)
@@ -208,10 +208,8 @@ function AboutMe () {
                 </div>
                 <h1 className={classes.subHead}>Hobbies & Community:</h1>
                 <div className={classes.content}>
-                    &nbsp;&nbsp;&bull; Crocheting and Knitting <br/>
-                    &nbsp;&nbsp;&bull; Speedcubing <br/>
+                    &nbsp;&nbsp;&bull; Junior Delegate at World Cube Association (Current)<br/>
                     &nbsp;&nbsp;&bull; Executive of UNSW RubikSoc (Vice President 2021, Events Director 2022) <br/>
-                    &nbsp;&nbsp;&bull; Member of World Cube Association Archive Team (2021 - Current)<br/>
                 </div>
 
             </div>

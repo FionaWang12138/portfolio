@@ -87,7 +87,7 @@ function Home () {
             <div className={classes.textBox}>
                 <h1 className={classes.heading}>Hi, I'm <span className={classes.blue} >Fiona</span>&nbsp;<span className={classes.green}>Wang</span></h1>
                 <br/>
-                <h3 className={classes.subLine}>A Third Year Computer Science Student at UNSW</h3>
+                <h3 className={classes.subLine}>A Recent Computer Science Graduate From UNSW</h3>
                 <div className={classes.icons}>
                     <StyledCard ><CardActionArea href="https://github.com/FionaWang12138/" target="_blank">
                         <div><Icon icon="akar-icons:github-fill" color="#77C9D4" width="30" height="30" /></div>
@@ -97,7 +97,7 @@ function Home () {
                         <div><Icon icon="eva:email-outline" color="#67cab9" width="30" height="30" /></div>
                         <h4 className={classes.reduceMargin}>Email</h4>
                     </CardActionArea></StyledCard>
-                    <StyledCard><CardActionArea href="https://drive.google.com/file/d/1pihx2hVt_xRYca0T7v9NVK5ldERNE3pX/view?usp=sharing" target="_blank">
+                    <StyledCard><CardActionArea href="https://drive.google.com/file/d/1YJ8ScI6n-VacnVpVwBzXI1eBULRG4t-Y/view?usp=sharing" target="_blank">
                         <div><Icon icon="healthicons:i-certificate-paper-outline" color="#57BC90" width="30" height="30" /></div>
                         <h4 className={classes.reduceMargin}>Resume</h4>
                     </CardActionArea></StyledCard>
